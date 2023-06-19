@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Andrew Kryvaus">
 	<title>Mogo</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" href="images/favicon.svg" type="image/svg+xml" sizes="any">
@@ -15,11 +16,13 @@
 		href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
 	<section class="banner">
 		<div class="wrapper">
+			<input type="checkbox" id="burger">
 			<header class="header">
 				<div class="logo">
 					<a href="#"><img src="images/logo.svg" alt="Mogo"></a>
@@ -38,9 +41,23 @@
 						</li>
 						<li>
 							<a class="header__icon-wrapper" href="#">
-								<i href="#" class="header__menu-icon header__menu-icon_search"></i>
+								<i class="header__menu-icon header__menu-icon_search"></i>
 							</a>
 						</li>
+					</ul>
+				</nav>
+				<label for="burger">
+					<span class="burger-row burger-row_top"></span>
+					<span class="burger-row burger-row_mid"></span>
+					<span class="burger-row burger-row_bot"></span>
+				</label>
+				<nav class="hidden__menu">
+					<ul>
+						<li><a href="#">about</a></li>
+						<li><a href="#">service</a></li>
+						<li><a href="#">work</a></li>
+						<li><a href="#">blog</a></li>
+						<li><a href="#">contact</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -51,10 +68,18 @@
 				<div class="banner__row row"></div>
 				<a class="banner__link" href="#">learn more</a>
 				<div class="banner__sliders">
-					<div class="banner__slider">01<span> intro</span></div>
-					<div class="banner__slider">02<span> work</span></div>
-					<div class="banner__slider">03<span> about</span></div>
-					<div class="banner__slider">04<span> contacts</span></div>
+					<div class="banner__slider">
+						<p>01<span> intro</span></p>
+					</div>
+					<div class="banner__slider">
+						<p>02<span> work</span></p>
+					</div>
+					<div class="banner__slider">
+						<p>03<span> about</span></p>
+					</div>
+					<div class="banner__slider">
+						<p>04<span> contacts</span></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -273,7 +298,6 @@
 					</div>
 				</div>
 			</div>
-			</div>
 		</section>
 
 		<section class="comment comment_user">
@@ -286,6 +310,13 @@
 						massa
 						sit.</p>
 					<p class="comment__name">Jon Doe</p>
+					<div class="comment__slider">
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -344,7 +375,7 @@
 							</div>
 						</div>
 						<h3 class="developer__name">Kadin Dias</h3>
-						<h4 class="developer__role">founder, ceo</h4>
+						<p class="developer__role">founder, ceo</p>
 					</div>
 					<div class="team__developer item">
 						<div class="developer__photo">
@@ -388,7 +419,7 @@
 							</div>
 						</div>
 						<h3 class="developer__name">Zain Calzoni</h3>
-						<h4 class="developer__role">designer</h4>
+						<p class="developer__role">designer</p>
 					</div>
 					<div class="team__developer item">
 						<div class="developer__photo">
@@ -432,7 +463,7 @@
 							</div>
 						</div>
 						<h3 class="developer__name">Charlie George</h3>
-						<h4 class="developer__role">photographer</h4>
+						<p class="developer__role">photographer</p>
 					</div>
 				</div>
 			</div>
@@ -464,7 +495,7 @@
 				</div>
 			</div>
 			<div class="work__gallery">
-				<div class="gallery__photo gallery__photo_1-1">
+				<div class="gallery__photo gallery__photo_1">
 					<img src="images/work_1.jpg" alt="photo1">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -474,7 +505,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery__photo gallery__photo_1-2">
+				<div class="gallery__photo gallery__photo_2">
 					<img src="images/work_3.jpg" alt="photo2">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -484,7 +515,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery__photo gallery__photo_1span2-3">
+				<div class="gallery__photo gallery__photo_3">
 					<img src="images/work_5.jpg" alt="photo3">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -494,7 +525,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery__photo gallery__photo_1-4">
+				<div class="gallery__photo gallery__photo_4">
 					<img src="images/work_6.jpg" alt="photo4">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -504,7 +535,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery__photo gallery__photo_2-1">
+				<div class="gallery__photo gallery__photo_5">
 					<img src="images/work_2.jpg" alt="photo5">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -514,7 +545,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery__photo gallery__photo_2-2">
+				<div class="gallery__photo gallery__photo_6">
 					<img src="images/work_4.jpg" alt="photo6">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -524,7 +555,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery__photo gallery__photo_2-4">
+				<div class="gallery__photo gallery__photo_7">
 					<img src="images/work_7.jpg" alt="photo7">
 					<div class="gallery__mask mask">
 						<div class="mask__wrapper">
@@ -547,6 +578,13 @@
 						massa
 						sit.</p>
 					<p class="comment__name">James Philips</p>
+					<div class="comment__slider">
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+						<div class="comment__dot"></div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -560,9 +598,9 @@
 				</div>
 				<div class="clients__container">
 					<div class="clients__client client">
-						<div class="client__photo"><img src="images/phillip culhane.jpg" alt="Phillip Culhane"></div>
+						<div class="client__photo"><img src="images/phillip_culhane.jpg" alt="Phillip Culhane"></div>
 						<h3 class="client__name">Phillip Culhane</h3>
-						<h4 class="client__role">photographer</h4>
+						<p class="client__role">photographer</p>
 						<div class="client_row row"></div>
 						<p class="client_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
 							quis
@@ -571,9 +609,9 @@
 							cursus.</p>
 					</div>
 					<div class="clients__client client">
-						<div class="client__photo"><img src="images/paityn press.jpg" alt="Paityn Press"></div>
+						<div class="client__photo"><img src="images/paityn_press.jpg" alt="Paityn Press"></div>
 						<h3 class="client__name">Paityn Press</h3>
-						<h4 class="client__role">photographer</h4>
+						<p class="client__role">photographer</p>
 						<div class="client_row row"></div>
 						<div class="client_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
 							quis
@@ -582,9 +620,9 @@
 							cursus.</div>
 					</div>
 					<div class="clients__client client">
-						<div class="client__photo"><img src="images/dulce gouse.jpg" alt="Dulce Gouse"></div>
+						<div class="client__photo"><img src="images/dulce_gouse.jpg" alt="Dulce Gouse"></div>
 						<h3 class="client__name">Dulce Gouse</h3>
-						<h4 class="client__role">photographer</h4>
+						<p class="client__role">photographer</p>
 						<div class="client_row row"></div>
 						<div class="client_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
 							quis
@@ -593,9 +631,9 @@
 							cursus.</div>
 					</div>
 					<div class="clients__client client">
-						<div class="client__photo"><img src="images/zaire schleifer.jpg" alt="Zaire Schleifer"></div>
+						<div class="client__photo"><img src="images/zaire_schleifer.jpg" alt="Zaire Schleifer"></div>
 						<h3 class="client__name">Zaire Schleifer</h3>
-						<h4 class="client__role">photographer</h4>
+						<p class="client__role">photographer</p>
 						<div class="client_row row"></div>
 						<div class="client_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
 							quis
@@ -705,8 +743,8 @@
 	<footer class="footer">
 		<div class="wrapper">
 			<div class="footer__container">
-				<div class="column-mogo">
-					<div class="column-mogo__logo"><img src="images/logo-grey.svg" alt="Mogo"></div>
+				<div class="column-mogo column__footer">
+					<div class="column-mogo__logo"><a href="#"><img src="images/logo-grey.svg" alt="Mogo"></a></div>
 					<p class="column-mogo__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
 						quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est
 						leo cursus.</p>
@@ -737,7 +775,7 @@
 						<button class="column-mogo__submit" type="submit">subscribe</button>
 					</form>
 				</div>
-				<div class="column-blogs">
+				<div class="column-blogs column__footer">
 					<h3 class="column-blogs__title">blogs</h3>
 					<article class="column-blogs__blog-preview">
 						<div class="blog-preview__photo"><img src="images/blog_1.jpg" alt="blog-1"></div>
@@ -755,7 +793,7 @@
 						<div class="blog-preview__date">jan.9.22.15</div>
 					</article>
 				</div>
-				<div class="column-instagram">
+				<div class="column-instagram column__footer">
 					<h3 class="column-instagram__title">blogs</h3>
 					<div class="column-instagram__gallery gallery-inst">
 						<div class="gallery-inst__photo"><img src="images/inst_1.jpg" alt="photo-inst-1"></div>
